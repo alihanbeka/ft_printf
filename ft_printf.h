@@ -7,5 +7,6 @@
 int	ft_printf(const char *format, ...);
 int	ft_print_char(char c);
 int	ft_print_str(char *str);
+int	ft_print_nbr(int n);
 
 #endif
