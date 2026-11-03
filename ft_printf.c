@@ -22,9 +22,12 @@ int	ft_printf(const char *format, ...)
 			else if (format[i + 1] == 'u')
 				count += ft_print_unsigned(va_arg(args, unsigned int));
 			else if (format[i + 1] == 'x' || format[i + 1] == 'X')
-				count += ft_print_hex(va_arg(args, unsigned int), format[i + 1]);
+				count += ft_print_hex(va_arg(args, unsigned int),
+						format[i + 1]);
 			else if (format[i + 1] == 'p')
 				count += ft_print_ptr(va_arg(args, void *));
+			else if (format[i + 1] == '%')
+				count += ft_print_char('%');
 			i++;
 		}
 		else

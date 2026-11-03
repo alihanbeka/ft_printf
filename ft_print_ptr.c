@@ -2,12 +2,12 @@
 
 int	ft_print_ptr(void *ptr)
 {
-	unsigned long	address;
-	int				count;
+	int	count;
 
-	address = (unsigned long)ptr;
+	if (!ptr)
+		return (ft_print_str("(nil)"));
 	count = 0;
 	count += ft_print_str("0x");
-	count += ft_print_hex_long(address);
+	count += ft_print_hex_long((unsigned long)ptr);
 	return (count);
 }
