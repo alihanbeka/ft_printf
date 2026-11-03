@@ -1,8 +1,8 @@
-#include "ft_printf.h"
+#include <stdio.h>
+
 
 int	main(void)
 {
-	ft_printf("Sayi: %d\n", -42);
-	ft_printf("Sayi2: %i\n", 123);
+	printf("%p\n", NULL);
 	return (0);
 }
